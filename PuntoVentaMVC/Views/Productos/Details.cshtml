@@ -1,0 +1,43 @@
+﻿@model PuntoVentaMVC.Models.Productos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Precio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Producto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
